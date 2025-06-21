@@ -23,6 +23,7 @@
 
 <details>
 
+-   [`241e5de`](https://github.com/stdlib-js/stdlib/commit/241e5de5107bafc5a9bdd478ce1660bf4080d106) - **docs:** use consistent types _(by Athan Reines)_
 -   [`3253591`](https://github.com/stdlib-js/stdlib/commit/32535910933dcb61a8b0cb47ac76cc789aeff6e0) - **feat:** add C implementation for `stats/base/dists/planck/logpmf` _(by Philipp Burckhardt)_
 -   [`094bea4`](https://github.com/stdlib-js/stdlib/commit/094bea4813d0bcbe184fe8d2be95b97b1ff3b045) - **feat:** add `stats/base/dists/planck/logpmf` [(#4182)](https://github.com/stdlib-js/stdlib/pull/4182) _(by Jaysukh Makvana, Athan Reines, stdlib-bot)_
 
