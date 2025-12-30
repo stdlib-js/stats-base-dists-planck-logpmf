@@ -149,17 +149,16 @@ y = mylogpmf( 1.0 );
 ```javascript
 var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
 var uniform = require( '@stdlib/random-array-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
 var logpmf = require( '@stdlib/stats-base-dists-planck-logpmf' );
 
-var x = discreteUniform( 10, 0, 5 );
-var lambda = uniform( 10, 0.1, 5.0 );
+var opts = {
+    'dtype': 'float64'
+};
+var x = discreteUniform( 10, 0, 5, opts );
+var lambda = uniform( 10, 0.1, 5.0, opts );
 
-var y;
-var i;
-for ( i = 0; i < lambda.length; i++ ) {
-    y = logpmf( x[ i ], lambda[ i ] );
-    console.log( 'x: %d, λ: %d, ln( P( X = x; λ ) ): %d', x[ i ], lambda[ i ].toFixed( 4 ), y.toFixed( 4 ) );
-}
+logEachMap( 'x: %d, λ: %0.4f, ln( P( X = x; λ ) ): %0.4f', x, lambda, logpmf );
 ```
 
 </section>
@@ -322,8 +321,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
